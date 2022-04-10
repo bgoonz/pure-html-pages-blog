@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="Author" content="Bryan Guner" />
+    <title>directory</title>
+
+    <style>
+      /* iframe */
+
+      .iframe {
+        margin-bottom: 45px;
+        border: 3px solid #131c28;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .iframe iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+        display: block;
+      }
+
+      .iframe-header {
+        display: none;
+      }
+
+      .js .iframe-header {
+        display: block;
+      }
+
+      .iframe-content {
+        /* ipad iframe hack */
+        height: 400px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .iframe-header a {
+        font-size: 15px;
+        color: white;
+        background: #000000;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 3px solid #131c28;
+      }
+
+      .iframe-header a:hover,
+      .iframe-header a:focus {
+        background: #000000;
+      }
+
+      .iframe-full-screen .iframe-header {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+      }
+
+      .iframe-full-screen .iframe-content {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .iframe-full-screen .iframe-header a {
+        padding: 0;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        border: 3px solid #131c28;
+      }
+
+      .iframe-full-screen body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .iframe-full-screen .iframe.iframe-active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        border: none;
+      }
+
+      .iframe-full-screen .iframe iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+      }
+
+      a {
+        color: black;
+      }
+
+      li {
+        border: 1px solid black !important;
+        font-size: 20px;
+        letter-spacing: 0px;
+        font-weight: 700;
+        line-height: 16px;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        background: #194ccdaf !important;
+        color: black !important;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        padding: 30px 60px;
+        height: 48px;
+        text-align: center;
+        white-space: normal;
+        border-radius: 10px;
+        min-width: 45em;
+        padding: 1.2em 1em 0;
+        box-shadow: 0 0 5px;
+        margin: 1em;
+        display: grid;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+      /* iframe */
+      /* iframe */
+
+      .iframe {
+        /* overflow: hidden; */
+
+        border-radius: 5px;
+        resize: both;
+        padding: 1px;
+      }
+      body {
+        overflow: scroll;
+        background-image: url(./../../200w.gif);
+      }
+      .iframe iframe {
+        width: 100%;
+        height: 470px;
+        border: 0;
+        display: block;
+        zoom: 1.45;
+        align-self: center;
+        margin: auto;
+      }
+
+      .iframe-header {
+        display: none;
+      }
+
+      .js .iframe-header {
+        display: block;
+      }
+
+      .iframe-content {
+        /* ipad iframe hack */
+        height: 600px;
+        overflow: auto;
+        -webkit-overflow-scrolling: auto;
+      }
+
+      .iframe-header a {
+        font-size: 35px;
+        color: white;
+        background: #000000;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 3px solid #131c28;
+      }
+      .iframe-header a:hover,
+      .iframe-header a:focus {
+        background: #000000;
+        background-color: black;
+      }
+
+      .iframe-full-screen .iframe-header {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+      }
+
+      .iframe-full-screen .iframe-content {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .iframe-full-screen .iframe-header a {
+        padding: 0;
+        background-color: black;
+        height: 24px;
+        line-height: 26px;
+        text-align: center;
+        border: 3px solid #131c28;
+
+        overflow: scroll;
+      }
+      ::-webkit-scrollbar {
+        width: 2px;
+        background-color: #f5f5f5;
+      }
+
+      .style-4::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border: 2px solid #000000;
+      }
+      .iframe-full-screen .iframe.iframe-active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        border: none;
+      }
+      .iframe-full-screen body {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+
+        margin-left: 30px;
+        float: left;
+        height: 300px;
+        width: 65px;
+        background: #f5f5f5;
+        overflow-y: scroll;
+        margin-bottom: 25px;
+      }
+
+      .iframe-full-screen .iframe.iframe-active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        border: none;
+      }
+
+      .iframe-full-screen .iframe iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+      }
+
+      .wrapper {
+        max-width: 1500px;
+        margin: 6px auto;
+        resize: both;
+        display: flex;
+        flex-wrap: wrap;
+        resize: both;
+        border-radius: 15px;
+      }
+
+      .item {
+        display: inline-block;
+        flex: 1 300px;
+        resize: both;
+      }
+
+      @media all and (max-height: 700px) {
+        .iframe {
+          height: 350px;
+          resize: both;
+        }
+      }
+      body {
+        overflow-y: scroll;
+      }
+
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: black;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .js .iframe-header {
+        display: block;
+      }
+
+      .iframe-content {
+        /* ipad iframe hack */
+
+        height: 400px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .iframe-header a {
+        font-size: 30px;
+        color: white;
+        background: #000000;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 3px solid gold;
+      }
+
+      .iframe-header a:hover,
+      .iframe-header a:focus {
+        background: #000000;
+      }
+
+      .item {
+        padding: 15px;
+        display: inline-block;
+        flex: 1 300px;
+      }
+
+      @media all and (max-height: 400px) {
+        .iframe {
+          height: 300px;
+        }
+      }
+      .iframe {
+        border: 1px solid #131c28;
+        overflow: scroll !important;
+        resize: both !important;
+      }
+
+      .iframe iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+        padding: 4px;
+        margin: 4px;
+        padding: 15px;
+        display: block;
+      }
+
+      .iframe-header {
+        display: none;
+      }
+
+      .js .iframe-header {
+        display: block;
+      }
+
+      .iframe-content {
+        /* ipad iframe hack */
+        height: 400px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .iframe-header a {
+        font-size: 15px;
+        color: white;
+        background: #000000;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 3px solid #131c28;
+      }
+
+      .iframe-header a:hover,
+      .iframe-header a:focus {
+        background: #000000;
+      }
+
+      .iframe-full-screen .iframe-header {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+      }
+
+      .iframe-full-screen .iframe-content {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .iframe-full-screen .iframe-header a {
+        padding: 0;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        border: 3px solid #131c28;
+      }
+
+      .iframe-full-screen body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .iframe-full-screen .iframe.iframe-active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        border: none;
+      }
+
+      .iframe-full-screen .iframe iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+      }
+
+      .wrapper {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        display: inline-block;
+        flex: 1 300px;
+      }
+
+      @media all and (max-height: 400px) {
+        .iframe {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+      
+<div class="wrapper">
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./10-vs-code-extensions-for-js-developers.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./25-css-gradients.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./4-javascript-array-methods.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./4-seo-tips-for-developers.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./5-tips-for-better-pull-requests.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./6-javascript-regexp-tricks.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./6-python-f-strings-tips.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./6-tips-for-your-next-remote-onboarding.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./7-chrome-extensions-for-web-developers.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./8-tips-for-accessible-websites.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./8-tips-for-remote-work.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./async-javascript-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./benefits-of-writing.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./breaking-react.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./code-anatomy-chaining-reduce-for-loop.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./code-anatomy-optimizing-recursion.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./code-anatomy-performant-python.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./console-log-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./cookies-local-storage-session.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./copy-text-to-clipboard-with-javascript.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./css-centering.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./css-easing-variables.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./css-pseudo-classes.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./css-units-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./css-variables.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./custom-file-download-names.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./detect-caps-lock-is-on.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./eslint-refactor-for-in.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./flexbox-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./git-aliases.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./git-commit-different-date.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./git-fast-forward.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./github-co-authors.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./http-status-codes-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-array-comparison.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-arrow-function-event-listeners.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-arrow-functions.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-arrow-regular-function-differences.html">
+      </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-async-array-loops.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-await-timeout.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-boolean-function.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-boolean-trap.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-callbacks.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-classical-vs-prototypal-inheritance.html">
+      </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-closures.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-copy-array.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-deep-freeze-object.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-destructuring-assignment.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-empty-array.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-encodeuri-encodeuricomponent.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-enum.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-equality.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-event-bubbling-capturing-delegation.html">
+      </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-expression-statement.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-for-in-for-of-foreach.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-for-loop-early-break.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-function-call-apply-bind.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-higher-order-functions.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-iife.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-index-for-of-loop.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-iterable-to-array.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-iterators.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-json-stringify-pick-keys.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-listen-once.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-make-iterable.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-memoization.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-merge-arrays.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-modify-url-without-reload.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-module-cheatsheet.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-naming-conventions.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-nullish-coalescing-optional-chaining.html">
+      </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-numeric-separator.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-object-array-proxy.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-object-comparison.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-object-is-triple-equals.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-pass-by-reference-or-pass-by-value.html">
+      </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-prefix-postfix-operators.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-prevent-string-being-escaped.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-primitive-instanceof.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-promise-then-catch.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-promise-then-finally.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-promises.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-pure-functions.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-query-selector-shorthand.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-range-generator.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-remove-object-property.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-return-constructor.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-shallow-deep-clone.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-singleton-proxy.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-sleep.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-spread-rest-syntax.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-store-dom-items.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-string-immutability.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-swap-two-variables.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-switch-object.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-sync-async.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-target-blank.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-ternary-operator.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-this.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-truthy-falsy-values.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-undeclared-undefined-null.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-use-strict.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-value-as-number.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-value-not-equal-to-itself.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-var-let-const.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-variable-hoisting.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-variable-scope.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./javascript-void-links.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-array-min-max.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-array-sorting-shorthand.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-callbacks.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-data-structures-binary-search-tree.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-data-structures-binary-tree.html"> </iframe>
+        <div class="item">
+        <div class="iframe"><div class="iframe-header"><iframe src="./js-data-structures-doubly-linked-list.html"> </iframe>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /**
+       * jQuery Responsive IFrames
+       * @author Armin Solecki
+       *
+       * Licensed under the MIT License (http://creativecommons.org/licenses/MIT/)
+       *
+       **/
+      (function ($) {
+        $.responsiveIframes = function (el, options) {
+          var self = this;
+
+          // Access to jQuery and DOM versions of element
+          self.$el = $(el);
+          self.el = el;
+
+          // Add a reverse reference to the DOM object
+          self.$el.data("responsiveIframes", self);
+
+          self.init = function () {
+            self.options = $.extend(
+              {},
+              $.responsiveIframes.defaultOptions,
+              options
+            );
+
+            // wrap iframe
+            var iframeSrc = self.$el
+              .find("iframe")
+              .wrap('<div class="iframe-content" />')
+              .attr("src");
+
+            //generate header
+            var header =
+              '<div class="iframe-header">' +
+              '<a href="' +
+              iframeSrc +
+              '" class="iframe-trigger">' +
+              self.options.openMessage +
+              "</a>" +
+              "</div>";
+
+            var trigger = self.$el.prepend(header).find(".iframe-trigger");
+
+            // click event
+            $(trigger).click(function (e) {
+              e.preventDefault();
+
+              var $this = $(this),
+                $html = $("html"),
+                isFullScreen = $html.hasClass("iframe-full-screen"),
+                message = isFullScreen
+                  ? self.options.openMessage
+                  : self.options.closeMessage;
+
+              $this.text(message);
+
+              if (isFullScreen) {
+                self.$el.removeClass("iframe-active");
+                $html.removeClass("iframe-full-screen");
+                setTimeout(function () {
+                  $(window).scrollTop($this.data("iframe-scroll-position"));
+                }, 1);
+              } else {
+                $this.data("iframe-scroll-position", $(window).scrollTop());
+                self.$el.addClass("iframe-active");
+                $html.addClass("iframe-full-screen");
+              }
+            });
+          };
+
+          // Run initializer
+          self.init();
+        };
+
+        $.responsiveIframes.defaultOptions = {
+          openMessage: "Full screen",
+          closeMessage: "Close",
+        };
+
+        $.fn.responsiveIframes = function (options) {
+          return this.each(function () {
+            new $.responsiveIframes(this, options);
+          });
+        };
+      })(jQuery);
+    </script>
+    <script>
+      (function ($) {
+        $.responsiveIframes = function (el, options) {
+          var self = this;
+
+          // Access to jQuery and DOM versions of element
+          self.$el = $(el);
+          self.el = el;
+
+          // Add a reverse reference to the DOM object
+          self.$el.data("responsiveIframes", self);
+
+          self.init = function () {
+            self.options = $.extend(
+              {},
+              $.responsiveIframes.defaultOptions,
+              options
+            );
+
+            // wrap iframe
+            var iframeSrc = self.$el
+              .find("iframe")
+              .wrap('<div class="iframe-content" />')
+              .attr("src");
+
+            //generate header
+            var header =
+              '<div class="iframe-header">' +
+              '<a href="' +
+              iframeSrc +
+              '" class="iframe-trigger">' +
+              self.options.openMessage +
+              "</a>" +
+              "</div>";
+
+            var trigger = self.$el.prepend(header).find(".iframe-trigger");
+
+            // click event
+            $(trigger).click(function (e) {
+              e.preventDefault();
+
+              var $this = $(this),
+                $html = $("html"),
+                isFullScreen = $html.hasClass("iframe-full-screen"),
+                message = isFullScreen
+                  ? self.options.openMessage
+                  : self.options.closeMessage;
+
+              $this.text(message);
+
+              if (isFullScreen) {
+                self.$el.removeClass("iframe-active");
+                $html.removeClass("iframe-full-screen");
+                setTimeout(function () {
+                  $(window).scrollTop($this.data("iframe-scroll-position"));
+                }, 1);
+              } else {
+                $this.data("iframe-scroll-position", $(window).scrollTop());
+                self.$el.addClass("iframe-active");
+                $html.addClass("iframe-full-screen");
+              }
+            });
+          };
+
+          // Run initializer
+          self.init();
+        };
+
+        $.responsiveIframes.defaultOptions = {
+          openMessage: "Full screen",
+          closeMessage: "Close",
+        };
+
+        $.fn.responsiveIframes = function (options) {
+          return this.each(function () {
+            new $.responsiveIframes(this, options);
+          });
+        };
+      })(jQuery);
+      $(document).ready(function () {
+        $(".iframe").responsiveIframes({
+          openMessage: "Open iframe",
+          closeMessage: "Close iframe",
+        });
+      });
+    </script>
+  </body>
+</html>
